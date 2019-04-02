@@ -22,7 +22,7 @@ if(anyPetsClean === 'y' || anyPetsClean === 'yes') {
   alert('What?? Yes or no only, please!');
 }
 
-var washingtonNative = prompt('Do you think I am native to WAshington State?');
+var washingtonNative = prompt('Do you think I am native to Washington State?');
 var washingtonNativeClean = washingtonNative.toLowerCase();
 
 if(washingtonNativeClean === 'y' || washingtonNativeClean === 'yes') {
@@ -31,6 +31,17 @@ if(washingtonNativeClean === 'y' || washingtonNativeClean === 'yes') {
   alert('Wrong! I\'m not a transplant. I was born in Redmond, WA!');
 } else {
   alert('Hmm. I think the answer you were looking for was, yes.');
+}
+
+var beenOnACruise = prompt('Have I ever been on a cruise?');
+var beenOnACruiseClean = beenOnACruise.toLowerCase();
+
+if(beenOnACruiseClean === 'y' || beenOnACruiseClean === 'yes') {
+  alert('Nope. I have higher hopes for my vacation than being stuck in the Ocean with strangers!');
+} else if(anyPetsClean === 'n' || anyPetsClean === 'no') {
+  alert('Correct! Stuck on a ship waiting for a virus outbreak is not the vacation for me.');
+} else {
+  alert('?????');
 }
 
 
