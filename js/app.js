@@ -28,7 +28,7 @@ var washingtonNativeClean = washingtonNative.toLowerCase();
 if(washingtonNativeClean === 'y' || washingtonNativeClean === 'yes') {
   alert('Yep! King County, born and raised.');
 } else if(anyPetsClean === 'n' || anyPetsClean === 'no') {
-  alert('Wrong! I\'m not a transplant. I was born in Redmond, WA!');
+  alert('Wrong! I was born in my parents bedroom right here in Redmond, WA!');
 } else {
   alert('Hmm. I think the answer you were looking for was, yes.');
 }
@@ -37,7 +37,7 @@ var beenOnACruise = prompt('Have I ever been on a cruise?');
 var beenOnACruiseClean = beenOnACruise.toLowerCase();
 
 if(beenOnACruiseClean === 'y' || beenOnACruiseClean === 'yes') {
-  alert('Nope. I have higher hopes for my vacation than being stuck in the Ocean with strangers!');
+  alert('Nope. I have higher hopes for my vacations than being stuck on the Ocean with strangers!');
 } else if(anyPetsClean === 'n' || anyPetsClean === 'no') {
   alert('Correct! Stuck on a ship waiting for a virus outbreak is not the vacation for me.');
 } else {
