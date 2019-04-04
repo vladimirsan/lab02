@@ -1,5 +1,9 @@
 'use strict';
 
+alert('Hi! Welcome to my page. I have a few questions for you to see how well you know me!');
+
+var userName = prompt('First, What is your name?');
+
 var anySiblings = prompt('Do I have any siblings? ').toLowerCase();
 
 if(anySiblings === 'y' || anySiblings === 'yes') {
@@ -65,17 +69,49 @@ var numberOfTattoos = Number(prompt('I will give you five chances at guessing ho
 console.log('Checking prompt on first use input for how many tats they think I have:' , numberOfTattoos);
 
 var guessesRemaining = 5;
-// I am writing my if statement and while loop this way because it's the only format that I tried that finally worked. Although I feel as though the first if and the 2nd if should be able to be combined, I couldn't get my code to loop proberly and break the loop properly when I only had the first or third 'if' statements as opposed to both.
+
+// I am writing my 'if' statement and while loop this way because it's the only format that I tried that finally worked. Although I feel as though the first if and the 2nd if should be able to be combined, I couldn't get my code to loop proberly and break the loop properly when I only had the first or third 'if' statements as opposed to both.
 if(numberOfTattoos === 6) {
   alert('Correct! I spent more money than I care to discuss on my six tattoos!');
 } else {
-  while(guessesRemaining > 0 && numberOfTattoos !== 6) {
+  while(guessesRemaining > 1 && numberOfTattoos !== 6) {
     guessesRemaining--;
-    alert('Nope!');
+    if(numberOfTattoos > 6) {
+      alert('No, ' + userName +', That guess is too high! But I\'ll get there someday.');
+    }
+    if(numberOfTattoos < 6) {
+      alert('Close, but you are guessing too low.');
+    }
     numberOfTattoos = Number(prompt('Guess again! You have ' + guessesRemaining + ' more tries.'));
     if(guessesRemaining > 0 && numberOfTattoos === 6) {
       alert('Correct! I have spent more money than I care to discuss on my six tattoos!');
     }
   }
 }
-console.log('Checking user input for number of tats again:' , numberOfTattoos);
+
+alert('You already know that I have a dog! I love animals though and have had a variety of pets in my life!');
+
+var petsIHad = ['ferret', 'crow', 'pigeon', 'bird', 'lizard', 'gerbil'];
+var numberOfGuesses = 5;
+
+while(numberOfGuesses > 0) {
+  var guessWhichPet = prompt('Name an animal, besides a dog, that you think I may have had for a pet in my life. One word only and please make don\'t make it plural! My code won\'t accept your answer if there\'s an \'s\' at the end! I will give you 5 guesses!').toLowerCase();
+  console.log('initial type of pet prompt response' , guessWhichPet);
+  numberOfGuesses--;
+  for(var i = 0; i < petsIHad.length; i++) {
+    //   console.log('checking pets i had' , petsIHad[i]);
+    if(guessWhichPet === petsIHad[i]) {
+      alert('Great work, ' + userName + '! I did have the pleasure of caring for a ' + guessWhichPet + ' before!');
+      console.log('checking pets i had' , petsIHad[i]);
+      numberOfGuesses = 0;
+    }
+  }
+  if(guessWhichPet !== petsIHad[i] && numberOfGuesses > 0) {
+    alert(guessWhichPet + '? No, I have never had one of those.');
+    guessWhichPet = alert('You still have ' + numberOfGuesses + ' guesses left! Keep trying.');
+    // numberOfGuesses--;
+  }
+  if(numberOfGuesses === 0){
+    alert('All done!');
+  }
+}
